@@ -15,9 +15,8 @@ public class Cooperator extends PlayerStrategy{
 
     @Override
     public boolean decisio() {
-        super.decisio=true;
-        System.out.print("cooperator"+decisio);
-        return decisio;
+       
+        return true;
     }
     
      

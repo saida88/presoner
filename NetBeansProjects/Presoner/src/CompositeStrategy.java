@@ -17,7 +17,7 @@ public class CompositeStrategy extends PlayerStrategy{
     protected List <PlayerStrategy> strategies= new ArrayList <PlayerStrategy> ();
     private static Random rnd = new Random();
     protected Integer i = 0;
-    
+    private boolean decisio; 
     public CompositeStrategy() {
         strategies.add(new RandomStrategy());
         strategies.add(new Gredy());
@@ -28,7 +28,7 @@ public class CompositeStrategy extends PlayerStrategy{
     @Override
     public boolean decisio() {
       
-         super.decisio=strategies.get(rnd.nextInt(3)).decisio();
+        decisio=strategies.get(rnd.nextInt(3)).decisio();
        
         return decisio;
     }

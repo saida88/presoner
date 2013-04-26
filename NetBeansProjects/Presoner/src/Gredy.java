@@ -10,7 +10,7 @@
 public class Gredy extends PlayerStrategy {
 
     public Gredy() {
-        super.decisio=false;
+       
     }
 
     @Override

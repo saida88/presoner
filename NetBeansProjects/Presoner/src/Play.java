@@ -21,16 +21,16 @@ public class Play {
         this.player2=player2;
         this.m=m;
         this.rondes =rondes;
-        puntuacio1=0;
-        puntuacio2=0;
+        this.puntuacio1=0;
+        this.puntuacio2=0;
     }
 
     public void run(){
        
-        for(int i=0; i<=rondes; i++){
+        for(int i=0; i<rondes; i++){
             
             boolean d1=player1.decision();
-            System.out.print(d1);
+    
             boolean d2=player2.decision();
             puntuacio1=puntuacio1+m.ronda(d1, d2);
             puntuacio2=puntuacio2+m.ronda(d2,d1);

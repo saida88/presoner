@@ -31,12 +31,12 @@ public class PlayerTest {
         PlayerStrategy gredy= new Gredy();
         PlayerStrategy cooperator= new Cooperator();
         Player p1=new Player(gredy);
-        Player p2= new Player(cooperator);
+        Player p2= new Player(cooperator);        
         UtilityMatrix u= new UtilityMatrix();
-        int rondes=1;
+        int rondes=2;
         Play p=new Play(p1,p2,u,rondes);
         p.run();
         assertEquals(p.getPuntuacio1(), new Integer(0));
-       // assertEquals(p.getPuntuacio2(), new Integer(3));
+        assertEquals(p.getPuntuacio2(), new Integer(6));
     }
 }

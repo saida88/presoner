@@ -10,7 +10,7 @@
 import java.util.Random;
 
 public class RandomStrategy extends PlayerStrategy {
-    
+  private boolean decisio;  
  private static Random rnd = new Random();
     
  public RandomStrategy() {
@@ -20,7 +20,7 @@ public class RandomStrategy extends PlayerStrategy {
     @Override
     public boolean decisio() {
         
-         super.decisio=rnd.nextBoolean();
+         decisio=rnd.nextBoolean();
         
         return decisio;
     }

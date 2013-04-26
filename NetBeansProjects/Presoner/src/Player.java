@@ -13,14 +13,14 @@ public class Player {
     boolean decisio_company;
 
     public Player(PlayerStrategy strategy) {
-        strategy=this.strategy;
+        this.strategy=strategy;
     }
     public boolean strategyRival(boolean decisio){
      
         return true;
     }
     public boolean decision (){
-        System.out.print(strategy.decisio);
+    
         return strategy.decisio();
     } 
     
