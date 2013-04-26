@@ -18,7 +18,8 @@ public class PlayTest {
     }
 
     @BeforeClass
-    public static void setUpClass() throws Exception {
+    public static void setUpClass() {
+        
     }
 
     @AfterClass

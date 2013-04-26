@@ -18,7 +18,7 @@ public class RandomStrategy extends PlayerStrategy {
     }
 
     @Override
-    public boolean desicio() {
+    public boolean decisio() {
         
          super.decisio=rnd.nextBoolean();
         

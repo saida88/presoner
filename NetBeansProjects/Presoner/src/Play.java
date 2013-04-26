@@ -17,22 +17,24 @@ public class Play {
     Integer puntuacio1;
     Integer puntuacio2;
     public Play(Player player1, Player player2, UtilityMatrix m, Integer rondes) {
-        player1=this.player1;
-        player2=this.player2;
-        m=this.m;
+        this.player1=player1;
+        this.player2=player2;
+        this.m=m;
         this.rondes =rondes;
         puntuacio1=0;
         puntuacio2=0;
     }
 
     public void run(){
-        for(int i=0; i>=rondes; i++){
-            boolean p1=player1.decision();
-            boolean p2=player2.decision();
-            player1.conunicate(p2);
-            player2.conunicate(p1);
-            puntuacio1=puntuacio1+m.ronda(p1, p2);
-            puntuacio2=puntuacio2+m.ronda(p2, p1);
+       
+        for(int i=0; i<=rondes; i++){
+            
+            boolean d1=player1.decision();
+            System.out.print(d1);
+            boolean d2=player2.decision();
+            puntuacio1=puntuacio1+m.ronda(d1, d2);
+            puntuacio2=puntuacio2+m.ronda(d2,d1);
+            System.out.print("Ronda:"+i+"Puntuacio jugador 1: "+puntuacio1+"Puntuacio jugador 2: "+puntuacio2+"\n");
         }
     }
     
@@ -50,6 +52,18 @@ public class Play {
 
     public Player getPlayer2() {
         return player2;
+    }
+
+    public Integer getPuntuacio1() {
+        return puntuacio1;
+    }
+
+    public Integer getPuntuacio2() {
+        return puntuacio2;
+    }
+
+    public Integer getRondes() {
+        return rondes;
     }
     
    

@@ -9,10 +9,12 @@
  */
 public abstract class PlayerStrategy {
         public boolean decisio;
+        
     public PlayerStrategy() {
     }
    
-    public boolean desicio(){
+    public boolean decisio(){
+       System.out.print("super");
         return decisio;
     }
 

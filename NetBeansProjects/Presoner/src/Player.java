@@ -20,7 +20,8 @@ public class Player {
         return true;
     }
     public boolean decision (){
-        return strategy.desicio();
+        System.out.print(strategy.decisio);
+        return strategy.decisio();
     } 
     
     public void comunicate(boolean decisio){

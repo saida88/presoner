@@ -26,9 +26,9 @@ public class CompositeStrategy extends PlayerStrategy{
     }
 
     @Override
-    public boolean desicio() {
+    public boolean decisio() {
       
-         super.decisio=strategies.get(rnd.nextInt(3)).desicio();
+         super.decisio=strategies.get(rnd.nextInt(3)).decisio();
        
         return decisio;
     }

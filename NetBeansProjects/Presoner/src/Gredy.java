@@ -14,8 +14,8 @@ public class Gredy extends PlayerStrategy {
     }
 
     @Override
-    public boolean desicio() {
-        return super.desicio();
+    public boolean decisio() {
+        return false;
     }
     
 }
