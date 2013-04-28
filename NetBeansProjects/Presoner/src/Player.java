@@ -15,18 +15,13 @@ public class Player {
     public Player(PlayerStrategy strategy) {
         this.strategy=strategy;
     }
-    public boolean strategyRival(boolean decisio){
-     
-        return true;
+    public void strategyRival(boolean decisio){    
+        decisio_company=decisio;
     }
     public boolean decision (){
-    
         return strategy.decisio();
     } 
     
-    public void comunicate(boolean decisio){
-       this.decisio_company=decisio;
-    }
 
     public boolean isDecisio_company() {
         return decisio_company;

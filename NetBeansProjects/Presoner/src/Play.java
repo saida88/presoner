@@ -29,12 +29,13 @@ public class Play {
        
         for(int i=0; i<rondes; i++){
             
-            boolean d1=player1.decision();
-    
+            boolean d1=player1.decision();  
             boolean d2=player2.decision();
+            player1.strategyRival(d2);
+            player2.strategyRival(d1);
             puntuacio1=puntuacio1+m.ronda(d1, d2);
             puntuacio2=puntuacio2+m.ronda(d2,d1);
-            System.out.print("Ronda:"+i+"Puntuacio jugador 1: "+puntuacio1+"Puntuacio jugador 2: "+puntuacio2+"\n");
+            System.out.print("Ronda:"+i+"Puntuacio jugador 1: "+puntuacio1+" Puntuacio jugador 2: "+puntuacio2+"\n");
         }
     }
     

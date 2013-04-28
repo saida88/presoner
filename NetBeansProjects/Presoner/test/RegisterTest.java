@@ -14,18 +14,23 @@ import org.junit.BeforeClass;
  */
 public class RegisterTest {
     
+     Register r= new Register();
     public RegisterTest() {
+       
     }
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
+    
 
     @Test
-    public void testSomeMethod() {
+    public void testStringstrategygredy() {
+        r.getstrategy("gredy");
+        assertEquals(r.p.getClass(),new Gredy().getClass());
+        
+    }
+    
+     public void testStringotherstrategy() {
+        r.getstrategy("random");
+        assertEquals(r.p.getClass(),new RandomStrategy().getClass());
+        
     }
 }
